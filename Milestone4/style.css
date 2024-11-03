@@ -1,0 +1,266 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #222;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #FFE31A;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-top: 6px solid #FFE31A;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+legend {
+    font-weight: 900;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #FFE31A;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #FFE31A;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    box-sizing: border-box;
+    background-color: #444;
+    font-size: 1.1rem;
+    color: #eee;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #FFE31A;
+    outline: none;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: #FFE31A;
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #e67e22;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#resumeOutput {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    border: 3px solid #FFE31A;
+    border-radius: 16px;
+    background-color: #333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    color: #eee;
+}
+
+#resumeOutput h2 {
+    text-align: center;
+    color: #FFE31A;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+#resumeOutput h3 {
+    color: #FFE31A;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#resumeOutput h3::before {
+    content: "✦";
+    color: #FFE31A;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+#resumeOutput p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+#resumeOutput ul {
+    padding-left: 25px;
+}
+
+#resumeOutput ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    position: relative;
+    padding-left: 25px;
+}
+
+#resumeOutput ul li::before {
+    content: "●";
+    color: #FFE31A;
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.editable {
+    border: 2px solid #555;
+    padding: 10px;
+    background-color: #444;
+    transition: background-color 0.3s;
+}
+
+.editable:hover {
+    background-color: #555;
+}
+
+button.edit {
+    display: block;
+    max-width: 250px;
+    margin: -10px auto 15px auto; /* Adjust margin-top to move button upwards */
+    padding: 12px;
+    background-color: rgba(207, 203, 203, 0.349);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button.edit:hover {
+    background-color: rgb(185, 181, 181);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    #resumeOutput {
+        padding: 25px;
+    }
+
+    #resumeOutput h2 {
+        font-size: 1.8rem;
+    }
+
+    #resumeOutput h3 {
+        font-size: 1.4rem;
+    }
+
+    #resumeOutput p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form, #resumeOutput {
+        padding: 20px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #resumeOutput h2 {
+        font-size: 1.5rem;
+    }
+
+    #resumeOutput h3 {
+        font-size: 1.2rem;
+    }
+
+    #resumeOutput p {
+        font-size: 1rem;
+    }
+}
