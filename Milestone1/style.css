@@ -1,4 +1,4 @@
-body{
+/* body{
     font-family:  Arial, Helvetica, sans-serif;
     background-color:#F4F6FF;
     margin: 0;
@@ -14,7 +14,6 @@ body{
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* left section */
 .left-section{
     background-color: black;
     color: white;
@@ -52,7 +51,6 @@ h3{
 
 ul{
     list-style-type: fill round;
-    /* padding: 10px; */
     margin: 10px;
 
 }
@@ -61,7 +59,6 @@ ul li {
     margin: 5px 0;
 }
 
-/* Right section */
 
 .right-section{
     padding: 20px;
@@ -78,4 +75,145 @@ button{
 }
 button:hover{
     background-color: #FFF100;
+} */
+
+
+/* Basic styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4F6FF;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-comtainer {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.left-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-right: 5px solid #e63946;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #e63946;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    padding: 2%;
+    margin: 20px 0 10px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #FF9D3D;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+ul {
+    list-style-type: fill round;
+    margin: 10px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Right Section */
+.right-section {
+    padding: 20px;
+    width: 65%;
+    background-color: #E9EED9;
+}
+
+button {
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #FFF100;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .resume-comtainer {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-comtainer {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .left-section,
+    .right-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    ul {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
 }
